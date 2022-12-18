@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="default" extends="struts-default">
+
+		<action name="updateHt" class="htjycAction" method="updateHt">
+			<result name="success">/addHt_success.jsp</result>
+		</action>
+		
+		<action name="selectAllHt" class="htjycAction" method="selectAllHt">
+			<result name="success">/allHt.jsp</result>
+		</action>
+		
+		<action name="selectAllHc" class="htjycAction" method="selectAllHc">
+			<result name="success">/allHc.jsp</result>
+		</action>
+		
+		<action name="addHt" class="htjycAction" method="addUIHt">
+			<result name="success">/updateHt.jsp</result>
+		</action>
+		
+		<action name="updateHtbyidUI" class="htjycAction" method="updateHtbyidUI">
+			<result name="success">/updateHtbyid.jsp</result>
+		</action>
+		
+		<action name="updateHtbyid" class="htjycAction" method="updateHtbyid">
+			<result name="success" type="redirectAction">selectAllHt</result>
+		</action>
+	</package>
+</struts>    
